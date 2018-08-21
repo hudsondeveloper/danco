@@ -4,8 +4,12 @@
              x:Class="dancoTeste1.view.Home.HomePage">
     <ContentPage.Content>
         <StackLayout>
-			<Label Text="Seja bem vindo!!!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-			
+			<Label x:Name="logado" Text="Seja bem vindo!!!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+			<Label x:Name="Status"
+               FontSize="20"/>
+
+			<Button Text="Verify" Clicked="VerifyInternet"/>
 			
 		</StackLayout>
     </ContentPage.Content>

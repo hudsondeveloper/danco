@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dancoTeste1.conexao;
+using Plugin.Connectivity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,13 @@ namespace dancoTeste1.view.Home
 		public HomePage ()
 		{
 			InitializeComponent ();
+            Dados dados = new Dados();
+            logado.Text += dados.Logado();
 		}
-	}
+        public void VerifyInternet(object sender, EventArgs e)
+        {
+            Status.Text = CrossConnectivity.Current.IsConnected ? "Connected" : "Disconnected";
+        }
+
+    }
 }

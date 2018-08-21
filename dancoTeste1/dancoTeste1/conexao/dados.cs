@@ -12,7 +12,7 @@ namespace dancoTeste1.conexao
 {
     public class Dados : IDisposable
     {
-
+        public static string userNome;
         private SQLiteConnection bd;
              private static String SQLCLIENTE=
         "CREATE TABLE IF NOT EXISTS pessoa(Id_pessoa INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -43,6 +43,13 @@ namespace dancoTeste1.conexao
            // bd.CreateTable<Empresa>();
         }
 
+
+        public string Logado()
+        {
+            return userNome;  
+        }
+
+
         public void InserirPessoa(Pessoa Pessoa)
         {
             bd.Insert(Pessoa);
@@ -55,6 +62,7 @@ namespace dancoTeste1.conexao
 
         public Boolean login(Pessoa pessoa)
         {
+            userNome = pessoa.Nome;
             return bd.Table<Pessoa>().Any(x => x.Nome == pessoa.Nome && x.Senha == pessoa.Senha);
         }
 
