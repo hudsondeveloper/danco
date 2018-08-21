@@ -33,8 +33,8 @@ namespace dancoTeste1.conexao
         public Dados()
         {
             string dbPath = Path.Combine(
-                 Environment.GetFolderPath(Environment.SpecialFolder.Personal),
-                 "danco1.db3");
+                 Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                 "danco2.db3");
             bd = new SQLiteConnection(dbPath);
 
             bd.Execute(SQLCLIENTE, SQLEMPRESA);
@@ -49,10 +49,19 @@ namespace dancoTeste1.conexao
             return userNome;  
         }
 
+        public void Deslogar()
+        {
+             userNome="";
+        }
 
         public void InserirPessoa(Pessoa Pessoa)
         {
             bd.Insert(Pessoa);
+        }
+
+        public void InserirEmpresa(Empresa empresa)
+        {
+            bd.Insert(empresa);
         }
 
         public void AtualizarPessoa(Pessoa Pessoa)
@@ -79,6 +88,18 @@ namespace dancoTeste1.conexao
         public List<Pessoa> GetPessoas()
         {
             return bd.Table<Pessoa>().ToList();
+        }
+
+        public List<Empresa> GetEmpresas()
+        {
+            List<Empresa> empresa = new List<Empresa>();
+            var stocksStartingWithA = bd.Query<Empresa>("SELECT * FROM empresa");
+            foreach (var s in stocksStartingWithA)
+            {
+                empresa.Add(s);
+            }
+
+            return empresa;
         }
 
         public void Dispose()

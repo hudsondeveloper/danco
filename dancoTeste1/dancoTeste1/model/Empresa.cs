@@ -12,7 +12,7 @@ namespace dancoTeste1.model
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         [MaxLength(50)]
-        public int Nome { get; set; }
+        public string Nome { get; set; }
         [MaxLength(100)]
         public string Email { get; set; }
         public int Id_pes { get; set; }

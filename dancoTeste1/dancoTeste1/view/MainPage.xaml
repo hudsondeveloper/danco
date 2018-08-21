@@ -12,7 +12,7 @@
 		<Label Text="Login" TextColor="White" HorizontalOptions="Center"/>
 		<Entry x:Name="etLogin" Placeholder="login"  Margin ="20,0,20,0" BackgroundColor="#E6E6E6"></Entry>
 		<Label Text="Senha" TextColor="White" HorizontalOptions="Center"/>
-		<Entry x:Name="etSenha" BackgroundColor="#E6E6E6" IsPassword="True"  Placeholder="senha"  Keyboard="Email" Margin ="20,0,20,0" ></Entry>
+        <Entry x:Name="etSenha" BackgroundColor="#E6E6E6" IsPassword="True"  Placeholder="senha" Margin ="20,0,20,0" ></Entry>
 		<Button x:Name="btnLogin" Text="Login" HorizontalOptions="Center" Clicked="login_clicked" BorderColor="Transparent" BackgroundColor="Transparent"/>
 		<Button x:Name="btnCadastro" Text="Cadastre-se" HorizontalOptions="Center" Clicked="cadastro_clicked"  BorderColor="Transparent" BackgroundColor="Transparent" Margin="0,-30,0,0" FontSize="12"/>
 	</StackLayout>
