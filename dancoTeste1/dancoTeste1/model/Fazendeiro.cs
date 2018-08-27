@@ -5,11 +5,13 @@ using System.Text;
 
 namespace dancoTeste1.model
 {
-    public class EmpresaPessoa
+    public class Fazendeiro
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public int PessoaId { get; set; }
-        public int EmpresaId { get; set; }
+        [MaxLength(50)]
+        public string Nome { get; set; }
+        [MaxLength(100)]
+        public string codFazenda { get; set; }
     }
 }

@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="dancoTeste1.view.Home.HomePage">
+             x:Class="dancoTeste1.view.Home.HomePage"
+			 BackgroundColor="#b9a375">
     <ContentPage.Content>
         <StackLayout>
-			<Label x:Name="logado" Text="Seja bem vindo!!!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-
+			<Image Source="http://www.sindafamg.com.br/wp-content/uploads/2016/01/Planta%C3%A7%C3%A3o-1240-x600-capa-site-sindafa.jpg" Aspect="AspectFill" ></Image>
+			<Label x:Name="logado" TextColor="White" Text="Seja bem vindo!!! " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
 			<Label x:Name="Status"
                FontSize="20"/>
-
-			<Button Text="Verify" Clicked="VerifyInternet"/>
+			<Button Text="Verify" Clicked="VerifyInternet" BackgroundColor="#a7c45a"/>
 			
 		</StackLayout>
     </ContentPage.Content>

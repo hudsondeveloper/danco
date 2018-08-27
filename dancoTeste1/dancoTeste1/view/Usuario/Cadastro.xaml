@@ -2,17 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="dancoTeste1.view.Cadastro"
-			 Title="Cadastro">
+			 Title="Cadastro"
+			  BackgroundColor="#b9a375">
     <ContentPage.Content>
-		<StackLayout BackgroundColor="#F7BE81">
+		<StackLayout >
 			<Label Text="Login" TextColor="White" HorizontalOptions="Center"/>
-			<Entry x:Name="etLogin" Placeholder="login" BackgroundColor="White" Margin ="20,0,20,0"></Entry>
+			<Entry x:Name="etLogin" Placeholder="login"  ></Entry>
 			
 			<Label Text="Senha" TextColor="White" HorizontalOptions="Center"/>
-			<Entry x:Name="etSenha" IsPassword="True"  Placeholder="senha"  BackgroundColor="White"  Margin ="20,0,20,0"></Entry>
+			<Entry x:Name="etSenha" IsPassword="True"  Placeholder="senha"  BackgroundColor="White" ></Entry>
 			
 			<Label Text="E-mail" TextColor="White" HorizontalOptions="Center"/>
-			<Entry x:Name="etEmail" Placeholder="E-mail"  BackgroundColor="White" Keyboard="Email" Margin ="20,0,20,0"></Entry>
+			<Entry x:Name="etEmail" Placeholder="E-mail"   Keyboard="Email"></Entry>
 			
 			<Button x:Name="btnCadastro" Text="Cadastrar" HorizontalOptions="Center" Clicked="cadastro_clicked"/>
 		</StackLayout>

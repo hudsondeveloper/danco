@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dancoTeste1.view.Formulario.Cadastrar"
+			 BackgroundColor="#b9a375">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+				<Label Text="Text=DANCO – Comércio e Indústria de Fumos Ltda." HorizontalOptions="CenterAndExpand" />
+				<Label Text="Ficha técnica de avaliação de lavradores" HorizontalOptions="CenterAndExpand" />
+				<Label Text="1 – Preparo do solo:" TextColor="#4169e1" Font="Bold,20" ></Label>
+				<StackLayout>
+				<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+				<Switch x:Name="q1a" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+				</StackLayout>
+				<StackLayout>
+					<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+					<Switch x:Name="q1b" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1c" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1d" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1e" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1f" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1g" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1h" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1i" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1j" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1k" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1l" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<Label Text="2 – Preparo do solo:" TextColor="#4169e1" Font="Bold,20" ></Label>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1m" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1n" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="1a – Fez análise do solo?" HorizontalOptions="Start"></Label>
+						<Switch x:Name="q1o" Toggled="onToggledSwitchq1a" HorizontalOptions="EndAndExpand"></Switch>
+					</StackLayout>
+				</StackLayout>
+				<Button x:Name="teste" Text="gravar" Clicked="teste_clicked" BackgroundColor="#a7c45a"></Button>
+			</StackLayout>
+		</ScrollView>
+
+	</ContentPage.Content>
+</ContentPage>

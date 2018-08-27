@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"			
-             x:Class="dancoTeste1.view.ListarEmpresa"
-			 Title="Listar Empresas">
+             x:Class="dancoTeste1.view.ListarPessoa"
+			 Title="Tecnicos"
+			 BackgroundColor="#b9a375">
 	
     <ContentPage.Content >
-		<StackLayout BackgroundColor="#F7BE81">
-			<ListView  x:Name="listEmpresas" ItemSelected="MyListView_OnItemSelected">
+		<StackLayout >
+			<ListView  x:Name="listPessoas" ItemSelected="MyListView_OnItemSelected" SeparatorColor="#a0bf5f">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>
-							<StackLayout BackgroundColor="#eee"
+							<StackLayout 
                         Orientation="Vertical">
-								<StackLayout Orientation="Vertical">
+								<StackLayout Orientation="Vertical" BackgroundColor="#eee">
 									<Label Text="{Binding Nome}"
-                                TextColor="#f35e20" />
+                                TextColor="Black" />
 									<Label Text="{Binding Email}"
                                 TextColor="#503026" />
 								</StackLayout>

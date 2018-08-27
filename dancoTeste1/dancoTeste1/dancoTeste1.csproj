@@ -11,28 +11,30 @@
 
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.4.118" />
-    <PackageReference Include="UXDivers.GorillaPlayer.SDK" Version="1.2.2" />
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="view\Empresa\DetalheEmpresa.xaml.cs">
-      <DependentUpon>DetalheEmpresa.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="view\Empresa\ListarEmpresa.xaml.cs">
-      <DependentUpon>ListarEmpresa.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="view\Ajuda\AjudaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="view\Empresa\CadastrarEmpresa.xaml">
+    <EmbeddedResource Update="view\Fazendeiro\Cadastro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="view\Pessoa\Cadastro.xaml">
+    <EmbeddedResource Update="view\Fazendeiro\DetalheFazenda.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="view\Fazendeiro\FormulariosFazenda.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="view\Fazendeiro\ListarFazendeiro.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="view\Formulario\Cadastrar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="view\Usuario\Cadastro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="view\Configuração\ConfiguracaoPage.xaml">
@@ -47,14 +49,20 @@
     <EmbeddedResource Update="view\Menu\Page1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="view\Pessoa\Detalhe.xaml">
+    <EmbeddedResource Update="view\Usuario\Detalhe.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="view\Pessoa\ListarPessoa.xaml">
+    <EmbeddedResource Update="view\Usuario\ListarPessoa.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="view\Sair.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="view\Fazenda\Cadastro.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

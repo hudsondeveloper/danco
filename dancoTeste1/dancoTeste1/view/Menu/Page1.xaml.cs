@@ -1,7 +1,7 @@
 ﻿using dancoTeste1.conexao;
 using dancoTeste1.view.Ajuda;
 using dancoTeste1.view.Configuração;
-using dancoTeste1.view.Empresa;
+using dancoTeste1.view.Fazendeiro;
 using dancoTeste1.view.Home;
 using dancoTeste1.view.Logout;
 using System;
@@ -23,8 +23,9 @@ namespace dancoTeste1.view.Menu
             // incluindo items de menu e definindo : title ,page and icon
             menuList.Add(new MasterPageItem() { Title = "Home", Icon = "home.png", TargetType = typeof(HomePage) });
             menuList.Add(new MasterPageItem() { Title = "Listar Pessoas", Icon = "settings.png", TargetType = typeof(ListarPessoa) });
-            //menuList.Add(new MasterPageItem() { Title = "LogOut", Icon = "logout.png", TargetType = typeof(LogoutPage) });
-            menuList.Add(new MasterPageItem() { Title = "Cadastrar Empresa", Icon = "logout.png", TargetType = typeof(CadastrarEmpresa) });
+            menuList.Add(new MasterPageItem() { Title = "Cadastrar Lavrador", Icon = "logout.png", TargetType = typeof(Fazendeiro.Cadastro) });
+            menuList.Add(new MasterPageItem() { Title = "Listar Lavrador", Icon = "logout.png", TargetType = typeof(ListarFazendeiro) });
+            menuList.Add(new MasterPageItem() { Title = "Cadastrar Fazenda", Icon = "logout.png", TargetType = typeof(Fazenda.Cadastro) });
             menuList.Add(new MasterPageItem() { Title = "Sair", Icon = "help.png", TargetType = typeof(Sair) });
             // Configurando o ItemSource fpara o ListView na MainPage.xaml
             paginaMestreList.ItemsSource = menuList;
@@ -33,9 +34,9 @@ namespace dancoTeste1.view.Menu
         }
         // Evento para a seleção de item no menu
         // trata a seleção do usuário no ListView
-        private async void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void OnMenuItemSelected(object sender, ItemTappedEventArgs e)
         {
-            var item = (MasterPageItem)e.SelectedItem;
+            var item = (MasterPageItem)e.Item;
             Type page = item.TargetType;
             if (page.Name=="Sair")
             {

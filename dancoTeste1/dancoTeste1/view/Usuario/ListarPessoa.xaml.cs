@@ -13,24 +13,22 @@ using Xamarin.Forms.Xaml;
 namespace dancoTeste1.view
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ListarEmpresa : ContentPage
+    public partial class ListarPessoa : ContentPage
     {
-        public ListarEmpresa()
+        public ListarPessoa()
         {
             InitializeComponent();
 
             using (var dados = new Dados())
             {
-               
-                listEmpresas.ItemsSource = dados.GetEmpresas();
-                
+                listPessoas.ItemsSource = dados.GetPessoas();
             }
         }
 
         private void MyListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var itemSelecionado = (model.Empresa)listEmpresas.SelectedItem;
-            DetalheEmpresa detalhe = new DetalheEmpresa();
+            var itemSelecionado = (model.Pessoa)listPessoas.SelectedItem;
+            Detalhe detalhe = new Detalhe();
             detalhe.BindingContext = itemSelecionado;
             Navigation.PushAsync(detalhe);
         }

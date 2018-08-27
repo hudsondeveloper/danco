@@ -8,28 +8,28 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace dancoTeste1.view.Empresa
+namespace dancoTeste1.view.Fazendeiro
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CadastrarEmpresa : ContentPage
+	public partial class Cadastro : ContentPage
 	{
-		public CadastrarEmpresa ()
+		public Cadastro ()
 		{
 			InitializeComponent ();
 		}
 
-        private void cadastro_clicked(object sender,EventArgs e)
+        private void cadastro_clicked(object sender, EventArgs e)
         {
-            using(var dados = new Dados())
+            using (var dados = new Dados())
             {
-                model.Empresa empresa = new model.Empresa
+                model.Fazendeiro fazendeiro = new model.Fazendeiro
                 {
-                    Email = etEmail.Text,
-                    Nome = etNome.Text
+                    Nome = this.etNome.Text,
+                    codFazenda = this.etFazenda.Text
                 };
                 try
                 {
-                    dados.InserirEmpresa(empresa);
+                    dados.InserirFazendeiro(fazendeiro);
                     DisplayAlert("Sucesso", etNome.Text + " cadastrado", "ok");
                 }
                 catch (Exception)
@@ -37,7 +37,7 @@ namespace dancoTeste1.view.Empresa
                     DisplayAlert("Atenção", etNome.Text + " não cadastrado", "ok");
                 }
 
-                Navigation.PushAsync(new ListarEmpresa());
+                Navigation.PopAsync();
             }
         }
     }

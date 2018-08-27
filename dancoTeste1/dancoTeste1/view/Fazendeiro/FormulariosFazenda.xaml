@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dancoTeste1.view.Fazendeiro.FormulariosFazenda"
+			 BackgroundColor="#b9a375">
+	<ContentPage.Content >
+		<StackLayout >
+				<ListView  x:Name="listFazendeiros" ItemTapped="MyListView_OnItemSelected">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<StackLayout BackgroundColor="#eee" Orientation="Vertical">
+									<StackLayout Orientation="Vertical">
+										<Label Text="{Binding Nome}"
+                                TextColor="#f35e20" />
+										<Label Text="{Binding codFazenda}"
+                                TextColor="#503026" />
+									</StackLayout>
+								</StackLayout>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</StackLayout>
+		</ContentPage.Content>
+</ContentPage>

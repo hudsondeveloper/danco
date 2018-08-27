@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dancoTeste1.view.Fazendeiro.Cadastro"
+			 Title="Cadastrar Lavrador"
+			 BackgroundColor="#b9a375">
+    <ContentPage.Content>
+		<StackLayout >
+			<Label Text="Nome" TextColor="White" />
+			<Entry x:Name="etNome" Placeholder="Nome"></Entry>
+
+			<Label Text="Fazenda" TextColor="White" />
+			<Entry x:Name="etFazenda" Placeholder="Fazenda"></Entry>
+
+			<Button x:Name="btnCadastro" Text="Cadastrar" BackgroundColor="#a7c45a" HorizontalOptions="Center" Clicked="cadastro_clicked"/>
+		</StackLayout>
+    </ContentPage.Content>
+</ContentPage>

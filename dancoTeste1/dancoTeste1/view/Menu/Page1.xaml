@@ -17,15 +17,15 @@
 					</StackLayout>
 				</Grid>-->
 				<StackLayout Grid.Row="1" Spacing="15">
-					<ListView x:Name="paginaMestreList" RowHeight="60" SeparatorVisibility="None" BackgroundColor="#e8e8e8" 
-                                ItemSelected="OnMenuItemSelected">
+				<ListView x:Name="paginaMestreList" RowHeight="30" SeparatorVisibility="None" BackgroundColor="#3e4d56" 
+                                ItemTapped="OnMenuItemSelected">
 						<ListView.ItemTemplate>
 							<DataTemplate>
 								<ViewCell>
 									<StackLayout>
-										<StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,10,0,10" Spacing="5">
+										<StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,10,0,10" Spacing="2">
 											<!--<Image Source="{Binding Icon}" WidthRequest="30" HeightRequest="30" VerticalOptions="Center" />-->
-											<Label Text="{Binding Title}" FontSize="Micro" VerticalOptions="Center" TextColor="Black"/>
+											<Label Text="{Binding Title}" FontSize="Micro" VerticalOptions="Center" TextColor="White"/>
 										</StackLayout>
 										<BoxView HeightRequest="1" BackgroundColor="Gray"/>
 									</StackLayout>
